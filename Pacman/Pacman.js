@@ -36,10 +36,10 @@ class Pacman {
       this.velocity.y = vel
       default:
     }
-    if(this.x <= 0 ){ this.x = map.length; }
-    if(this.y <= 0 ){ this.y = map.length; }
-    if(this.x > map.length ){ this.x = 0; }
-    if(this.y > map.length ){ this.y = 0; }
+    if(this.x <= 0 && this.velocity.x < 0 ){ this.x = map.length; }
+   // if(this.y <= 0 ){ this.y = map.length; }
+    if(this.x >= map.length && this.velocity.x > 0 ){ this.x = 0; }
+    //if(this.y > map.length ){ this.y = 0; }
 
     let newX = this.x + this.velocity.x
     let newY = this.y + this.velocity.y
